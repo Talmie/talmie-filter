@@ -1,0 +1,187 @@
+ItemDisplay[amu OR CIRC ILVL>84]:%NAME% %WHITE%(%DARK_GREEN%%ILVL%%WHITE%)%CONTINUE%// Appends ilvl for amulets and circlets up from ilvl 85
+ItemDisplay[cm3 ILVL>90]:%NAME% %GREEN%(%ORANGE%%ILVL%%GREEN%)%CONTINUE% // Appends ilvl for grandcharms higher than ilvl 90
+
+ItemDisplay[!ID !UNI AND cm3 AND ILVL>49]:%WHITE%A %BLUE%Skiller%WHITE% has dropped!%DOT-91%%CONTINUE% // grand charms called skillers when right ilvl reached
+ItemDisplay[!ID AND (cm1 OR cm2)]:%NAME%%DOT-91%%CONTINUE% // notify small & large charms (blue minimap square)
+
+ItemDisplay[ID AND RARE]: %NAME%%GREEN% (%WHITE%%PRICE%%GREEN%)%YELLOW%%CONTINUE% // add price tag for identified rares
+ItemDisplay[RARE !ID AND (amu OR rin OR jew)]: %NAME%%DOT-6F%%CONTINUE% // notify rare rings, jewels and amulets (yellow minimap square)
+
+
+// ====== PREFIX FAVOURITE ETHEREAL CRAFTING ITEMS ======
+ItemDisplay[!ID MAG ((axf OR 9xf OR 7xf) AND ETH)]:%RED%(C) %BLUE%%NAME%%CONTINUE% // war fist family
+ItemDisplay[!ID MAG ((whm OR 9wh OR 7wh) AND ETH)]:%RED%(C) %BLUE%%NAME%%CONTINUE% // war hammer family
+ItemDisplay[!ID MAG ((pik OR 9p9 OR 7p7) AND ETH)]:%RED%(C) %BLUE%%NAME%%CONTINUE% // pike family
+ItemDisplay[!ID MAG ((tax OR 9ta OR 7ta) AND ETH)]:%RED%(C) %BLUE%%NAME%%CONTINUE% // throwing axe family
+ItemDisplay[!ID MAG ((am5 OR ama OR amf) AND ETH)]:%RED%(C) %BLUE%%NAME%%CONTINUE% // amazon javs
+ItemDisplay[!ID MAG ((crs OR 9cr) AND ETH)]:%RED%(C) %BLUE%%NAME%%CONTINUE% // crystal sword & dimblade
+
+// ====== MAP UPGRADING/ROLLING ======
+ItemDisplay[upma]:%NAME%%CONTINUE%{%WHITE%Perfect Skull - %ORANGE%Thul Rune%NL%%BLUE%Magic Map%WHITE% to%YELLOW% Rare Map:}
+ItemDisplay[imra]:%NAME%%CONTINUE%{%BLUE%Jewel%WHITE%/%YELLOW%Jewel %WHITE%- %ORANGE%Thul Rune%NL%%WHITE%White Map to%YELLOW% Rare Map:}
+ItemDisplay[rera]:%NAME%%CONTINUE%{%WHITE%Any Gem - %ORANGE%Thul Rune%NL%%WHITE%Reroll %YELLOW%Rare Map:}
+
+// ====== SOME ITEM STAFFMODS ======
+ItemDisplay[SK265=3]:%NAME%%ORANGE% :: %GREEN%Cobra%CONTINUE% // add name for +3 cobra
+ItemDisplay[SK366=3]:%NAME%%ORANGE% :: %YELLOW%Sentry%CONTINUE% // add name for +3 lightning sentry
+ItemDisplay[SK269=3]:%NAME%%ORANGE% :: %YELLOW%Thunder%CONTINUE% // add name for +3 claws of thunder
+
+ItemDisplay[SUP (CHEST OR WEAPON) & ED=15 SOCK=0 !ETH]:%GREEN%(%ORANGE%15%%GREEN%) %WHITE%%NAME%%CONTINUE% // 
+ItemDisplay[SUP (CHEST OR WEAPON) & ED=14 SOCK=0 !ETH]:%GREEN%(%ORANGE%14%%GREEN%) %WHITE%%NAME%%CONTINUE% // 
+ItemDisplay[SUP (CHEST OR WEAPON) & ED=13 SOCK=0 !ETH]:%GREEN%(%ORANGE%13%%GREEN%) %WHITE%%NAME%%CONTINUE% // prefix quality for superior whites
+ItemDisplay[SUP (CHEST OR WEAPON) & ED=12 SOCK=0 !ETH]:%GREEN%(%ORANGE%12%%GREEN%) %WHITE%%NAME%%CONTINUE% // 
+ItemDisplay[SUP (CHEST OR WEAPON) & ED=11 SOCK=0 !ETH]:%GREEN%(%ORANGE%11%%GREEN%) %WHITE%%NAME%%CONTINUE% // 
+ItemDisplay[SUP (CHEST OR WEAPON) & ED=10 SOCK=0 !ETH]:%GREEN%(%ORANGE%10%%GREEN%) %WHITE%%NAME%%CONTINUE% // 
+
+ItemDisplay[SUP (CHEST OR WEAPON) & ED=15 (SOCK>0 OR ETH)]:%GREEN%(%ORANGE%15%%GREEN%) %GRAY%%NAME%%CONTINUE% // 
+ItemDisplay[SUP (CHEST OR WEAPON) & ED=14 (SOCK>0 OR ETH)]:%GREEN%(%ORANGE%14%%GREEN%) %GRAY%%NAME%%CONTINUE% // 
+ItemDisplay[SUP (CHEST OR WEAPON) & ED=13 (SOCK>0 OR ETH)]:%GREEN%(%ORANGE%13%%GREEN%) %GRAY%%NAME%%CONTINUE% // prefix quality for superior socketed or ethereal
+ItemDisplay[SUP (CHEST OR WEAPON) & ED=12 (SOCK>0 OR ETH)]:%GREEN%(%ORANGE%12%%GREEN%) %GRAY%%NAME%%CONTINUE% // 
+ItemDisplay[SUP (CHEST OR WEAPON) & ED=11 (SOCK>0 OR ETH)]:%GREEN%(%ORANGE%11%%GREEN%) %GRAY%%NAME%%CONTINUE% // 
+ItemDisplay[SUP (CHEST OR WEAPON) & ED=10 (SOCK>0 OR ETH)]:%GREEN%(%ORANGE%10%%GREEN%) %GRAY%%NAME%%CONTINUE% // 
+
+ItemDisplay[(UNI OR SET) ID NORM ARMOR]: %NAME%%CONTINUE%{%TAN%Tal + Shael + %WHITE%Diamond%NL%%ORANGE%Upgrade Recipe:} // 
+ItemDisplay[(UNI OR SET) ID EXC ARMOR]: %NAME%%CONTINUE%{%TAN%Ko + Lem + %WHITE%Diamond%NL%%ORANGE%Upgrade Recipe:}     // adds upgrade recipes for uni/set items
+ItemDisplay[(UNI OR SET) ID NORM WEAPON]: %NAME%%CONTINUE%{%TAN%Ral + Sol + %Green%Emerald%NL%%ORANGE%Upgrade Recipe:}  //
+ItemDisplay[(UNI OR SET) ID EXC WEAPON]: %NAME%%CONTINUE%{%TAN%Lum + Pul + %Green%Emerald%NL%%ORANGE%Upgrade Recipe:}   //
+
+ItemDisplay[(RARE OR CRAFT) NORM ARMOR]: %NAME%%CONTINUE%{%TAN%Ral + Thul + %PURPLE%Amethyst%NL%%ORANGE%Upgrade Recipe:} // 
+ItemDisplay[(RARE OR CRAFT) EXC ARMOR]: %NAME%%CONTINUE%{%TAN%Ko + Pul + %PURPLE%Amethyst%NL%%ORANGE%Upgrade Recipe:}    // adds upgrade recipes for rare/crafted items
+ItemDisplay[(RARE OR CRAFT) NORM WEAPON]: %NAME%%CONTINUE%{%TAN%Ort + Amn + %BLUE%Sapphire%NL%%ORANGE%Upgrade Recipe:}   //
+ItemDisplay[(RARE OR CRAFT) EXC WEAPON]: %NAME%%CONTINUE%{%TAN%Fal + Um + %BLUE%Sapphire%NL%%ORANGE%Upgrade Recipe:}     //
+
+ItemDisplay[lbox OR dcma OR dcbl OR dcho OR dcso OR scrb OR ubtm OR t11 OR t12 OR t13 OR t21 OR t22 OR t23 OR t24 OR t25 OR t31 OR t32 OR t33 OR t34 OR t35 OR t36 OR t37 OR t41]:%NAME%%DOT-9B%%PX-9B%%CONTINUE% // notify PD2 items (purple minimap)
+ItemDisplay[wss]:%PURPLE%Worldstone %WHITE%Slammer%DOT-9B%%PX-9B%%CONTINUE% // notify WSS
+ItemDisplay[lbox]:%PURPLE%= %GOLD%Larzuk's Juicebox%PURPLE% =%CONTINUE% // obviously
+
+ItemDisplay[NMAG t11]:Jiz Ruins%CONTINUE%            //
+ItemDisplay[MAG t11]:%BLUE%Jiz Ruins%CONTINUE%       // obviously
+ItemDisplay[RARE t11]:%YELLOW%Jiz Ruins%CONTINUE%    //
+
+ItemDisplay[NMAG t12]:Whorazon's Memory%CONTINUE%            //
+ItemDisplay[MAG t12]:%BLUE%Whorazon's Memory%CONTINUE%       // obviously
+ItemDisplay[RARE t12]:%YELLOW%Whorazon's Memory%CONTINUE%    //
+
+ItemDisplay[UNI !ID]:%NAME%%DOT-0C%%CONTINUE% // notify unid unique items + gold minimap square
+ItemDisplay[SET !ID !bsd !fhl !brs !gts]:%NAME%%DOT-84%%CONTINUE% // notify unid set items (except Isenhart) + green minimap square
+ItemDisplay[pk1 OR pk2 OR pk3 OR dcho OR dcso OR dcbl OR wss OR lbox QTY>1]:%NAME%%RED% x%QTY%%CONTINUE% // add quantity
+ItemDisplay[gpvs OR gpys OR gpbs OR gpgs OR gprs OR gpws OR skzs OR gzvs OR glys OR glbs OR glgs OR glrs OR glws OR skls QTY>1]:%NAME%%RED% x%QTY%%CONTINUE%// quantity for gems
+
+ItemDisplay[GEMLEVEL>3]:%NAME%%DOT-20%%CONTINUE% // notify flawless/perfect (white minimap square)
+ItemDisplay[GEM=1]: // Hide all Chipped gems
+ItemDisplay[GEM=2]: // Hide all Flawed gems
+ItemDisplay[GEM=3]: // Hide all Normal gems
+
+ItemDisplay[RUNE>12 RUNE<21]:%RED%- %NAME%%RED% -%DOT-9E%%CONTINUE% // notify rune between Shael - Lem (light blue minimap square)
+ItemDisplay[RUNE>20 RUNE<26]:%YELLOW%= %NAME%%YELLOW% =%DOT-9E%%CONTINUE% // notify rune between Pul - Gul (light blue minimap square)
+ItemDisplay[RUNE>25]:%GREEN%== %NAME%%GREEN% ==%DOT-62%%CONTINUE% // notify rune above Gul (red minimap square)
+
+ItemDisplay[RUNE>0 QTY>1]: %NAME% %RED%x%QTY%%CONTINUE% // Shows the quantity of runes if more than 1
+
+ItemDisplay[MAG ID]:%NAME%%CONTINUE%{%DARK_GREEN%Item Level: %ILVL%} // write item level in dark green below all magic items (description)
+
+// ------------------------------------------------------------------------------
+// Gold
+// ------------------------------------------------------------------------------
+ItemDisplay[DIFF=0 GOLD<1000]:%CONTINUE% // Hide 1000 gold and less in normal
+ItemDisplay[DIFF=1 GOLD<2000]:%CONTINUE% // Hide 2000 gold and less in nightmare
+ItemDisplay[DIFF=2 GOLD<5000]:%CONTINUE% // Hide 5000 gold and less in hell
+
+// ------------------------------------------------------------------------------
+// Potions
+// ------------------------------------------------------------------------------
+// Health Potions
+ItemDisplay[hp1 CLVL>4]: // Hides Minor Healing Potions after Character reaches level 5
+ItemDisplay[hp1 CLVL<5]: %RED%+%WHITE%Minor Healing // Minor Healing Potion
+ItemDisplay[hp2 CLVL>14]: // Hides Light Healing Potions after Character reaches level 15
+ItemDisplay[hp2 CLVL<15]: %RED%+%WHITE%Light Healing // Light Healing Potion
+ItemDisplay[hp3 CLVL>19]: // Hides Healing Potions after after Character reaches level 20
+ItemDisplay[hp3 CLVL<20]: %RED%+%WHITE%Healing // Healing Potion
+ItemDisplay[hp4 CLVL>24]: // Hides Greater Healing Potions after after Character reaches level 25
+ItemDisplay[hp4]: %RED%+%WHITE%Great Healing // Greater Healing Potion
+ItemDisplay[hp5 ILVL<86]: %RED%+%WHITE%Super Healing%CONTINUE% // Super Healing Potion
+
+// Mana Potions
+ItemDisplay[mp1 CLVL>9]: // Hides Minor Mana Potions after Character reaches level 10
+ItemDisplay[mp1 CLVL<10]: %BLUE%+%WHITE%Minor Mana // Minor Mana Potion
+ItemDisplay[mp2 CLVL>19]: // Hides Light Mana Potions after Character reaches level 20
+ItemDisplay[mp2 CLVL<20]: %BLUE%+%WHITE%Light Mana // Light Mana Potion
+ItemDisplay[mp3 CLVL>24]: // Hides Mana Potions after after Character reaches level 25
+ItemDisplay[mp3 CLVL<25]: %BLUE%+%WHITE%Mana // Mana Potion
+ItemDisplay[mp4 CLVL>34]: // Hides Greater Mana Potions after after Character reaches level 35
+ItemDisplay[mp4]: %BLUE%+%WHITE%Great Mana // Greater Mana Potion
+//ItemDisplay[mp5 CLVL>89]: // Hides Super Mana Potions after after Character reaches level 90 --- use when optimized mana usage
+ItemDisplay[mp5]: %BLUE%+%WHITE%Super Mana%CONTINUE% // Super Mana Potion
+
+// Rejuv Potions
+ItemDisplay[rvs]: %PURPLE%+%WHITE%Rejuvenation // Rejuv Potion
+ItemDisplay[rvl]: %PURPLE%++%WHITE%Rejuvenation // Full Rejuv Potion
+
+// Drinkable Potions
+ItemDisplay[vps CLVL<10]: %WHITE%+%WHITE%Stamina // show Stamina Potion for characters under lvl 10
+ItemDisplay[vps CLVL>9]:// hide Stamina Potion from lvl 10
+ItemDisplay[yps]: //%GREEN%+%WHITE%Antidote // hide Antidote Potion
+ItemDisplay[wms]: // %YELLOW%+%WHITE%Thawing // hide Thawing Potion
+
+// Hide all throwing Potions
+ItemDisplay[gpl]: // %GREEN%+%WHITE%Strangling // Strangling Potion
+ItemDisplay[gpl]: // Strangling Potion
+ItemDisplay[gpm]: // %GREEN%+%WHITE%Choking // Choking Potion
+ItemDisplay[gpm]: // Choking Potion
+ItemDisplay[gps]: // %GREEN%+%WHITE%Rancid // Rancid Potion
+ItemDisplay[gps]: // Rancid Potion
+ItemDisplay[opl]: // %ORANGE%+%WHITE%Fulminating // Fulminating Potion
+ItemDisplay[opl]: // Fulminating Potion
+ItemDisplay[opm]: // %ORANGE%+%WHITE%Exploding // Exploding Potion
+ItemDisplay[opm]: // Exploding Potion
+ItemDisplay[ops]: // %ORANGE%+%WHITE%Oil // Oil Potion
+ItemDisplay[ops]: // Oil Potion
+
+// ------------------------------------------------------------------------------
+// Scrolls & Tomes
+// ------------------------------------------------------------------------------
+ItemDisplay[isc CLVL<10]: Identify%RED%!%WHITE% // Scroll of Identify
+ItemDisplay[isc CLVL>9]: // Hides Scroll of Identify after Character reaches lvl 10
+ItemDisplay[tsc CLVL<10]: Town Portal%BLUE%!%WHITE% // Scroll of Town Portal
+ItemDisplay[tsc CLVL>9]: // Hides Scroll of Town Portal after Character reaches lvl 10
+ItemDisplay[ibk]: %RED%!%WHITE%Identify%RED%!%WHITE% // Tome of Identify
+ItemDisplay[tbk]: %BLUE%!%WHITE%Town Portal%BLUE%!%WHITE% // Tome of Town Portal
+
+// ------------------------------------------------------------------------------
+// Items Miscellaneous hiding
+// ------------------------------------------------------------------------------
+ItemDisplay[NMAG (aqv OR cqv)]:// hides arrows/bolts
+ItemDisplay[SOCK>0]: %NAME% %TAN%(%WHITE%%SOCKETS%%TAN%)%WHITE%%CONTINUE% // Appends sockets
+ItemDisplay[NMAG ETH]:%GRAY%(%WHITE%eth%GRAY%) %NAME%%CONTINUE% // Shows normal item as ethereal
+ItemDisplay[MAG ETH]:%BLUE%(%WHITE%eth%BLUE%) %NAME%%CONTINUE% // Shows magic item as ethereal
+ItemDisplay[RARE ETH]:%YELLOW%(%WHITE%eth%YELLOW%) %NAME%%CONTINUE% // Shows rare item as ethereal
+ItemDisplay[UNI ETH]:%GOLD%(%WHITE%eth%GOLD%) %NAME%%CONTINUE% // Shows unique item as ethereal
+ItemDisplay[CRAFT ETH]:%ORANGE%(%WHITE%eth%ORANGE%) %NAME%%CONTINUE% // Shows crafted item as ethereal
+ItemDisplay[DIN RES>29]:%NAME%%PURPLE% +++%WHITE%%CONTINUE% // Pala shields with max resistances
+ItemDisplay[NMAG leg]:%DARK_GREEN%Wirt's Leg%CONTINUE% // wirt's leg dark green
+
+ItemDisplay[NMAG (ARMOR OR WEAPON) ILVL<59 !leg !ETH SOCK=0 PRICE>9999]: %YELLOW%$ %WHITE%%NAME%%CONTINUE% // Show $ before all white items worth more than 10k gold
+ItemDisplay[NMAG (ARMOR OR WEAPON) ILVL>58 !leg !ETH SOCK=0 PRICE<15000 !TABSK0=3 !RES>29 !(SIN AND SK265=3)]:// Hide all white items with an ilvl higher than 58, worth less than 15k gold, with exceptions
+ItemDisplay[NMAG (ARMOR OR WEAPON) ILVL>58 !leg !ETH SOCK=0 PRICE>14999]: %YELLOW%$ %WHITE%%NAME%%CONTINUE% // Show $ before all white items worth more than 15k gold
+ItemDisplay[NMAG (ARMOR OR WEAPON) !ETH SOCK=0 PRICE>19999]: %YELLOW%$%WHITE%%NAME%%CONTINUE% // Show $$ before all white items worth more than 20k gold
+ItemDisplay[NMAG (ARMOR OR WEAPON) !ETH SOCK=0 PRICE>34999]: %YELLOW%$%WHITE%%NAME%%CONTINUE% // Show $$$ before all white items worth more than 35k gold
+
+ItemDisplay[NMAG (ARMOR OR WEAPON) ILVL<59 !leg ETH SOCK=0 PRICE>9999]: %YELLOW%$ %GRAY%%NAME%%CONTINUE% // Show $ before all ethereal 0 sox items worth more than 10k gold
+ItemDisplay[NMAG (ARMOR OR WEAPON) ILVL>58 !leg !ELT ETH SOCK=0 PRICE<15000 !RW !(EXC AND (WP7 OR WP8)) !RES>29]://Hide all ethereal items with an ilvl higher than 58, worth less than 15k gold, except elite items and 30@ pala shields
+ItemDisplay[NMAG (ARMOR OR WEAPON) ILVL>58 !leg ETH SOCK=0 PRICE>14999]: %YELLOW%$ %GRAY%%NAME%%CONTINUE% // Show $ before all ethereal 0 sox items worth more than 15k gold
+ItemDisplay[NMAG (ARMOR OR WEAPON) ETH SOCK=0 PRICE>19999]: %YELLOW%$%GRAY%%NAME%%CONTINUE% // Show $$ before all white items worth more than 20k gold
+ItemDisplay[NMAG (ARMOR OR WEAPON) ETH SOCK=0 PRICE>34999]: %YELLOW%$%GRAY%%NAME%%CONTINUE% // Show $$$ before all white items worth more than 35k gold
+
+ItemDisplay[NMAG (ARMOR OR WEAPON) ILVL<59 SOCK>0 !leg PRICE>9999]: %YELLOW%$ %GRAY%%NAME%%CONTINUE% // Show $ before all socketed items worth more than 10k gold
+ItemDisplay[NMAG (ARMOR OR WEAPON) ILVL>58 SOCK>0 !leg PRICE<15000 !(ELT AND ETH) !(ETH AND EXC AND (WP7 OR WP8)) !RW !TABSK0=3 !RES>29 !7cr !7wa !crs !fla !(brs AND SUP)]:// Hide all socketed items with an ilvl higher than 58, worth less than 15k gold, with some exceptions
+ItemDisplay[NMAG (ARMOR OR WEAPON) ILVL>58 SOCK>0 !leg PRICE>14999]: %YELLOW%$ %GRAY%%NAME%%CONTINUE% // Show $ before all socketed items worth more than 15k gold
+ItemDisplay[NMAG (ARMOR OR WEAPON) SOCK>0 PRICE>19999]: %YELLOW%$%GRAY%%NAME%%CONTINUE% // Show $$ before all socketed items worth more than 20k gold
+ItemDisplay[NMAG (ARMOR OR WEAPON) SOCK>0 PRICE>34999]: %YELLOW%$%GRAY%%NAME%%CONTINUE% // Show $$$ before all socketed items worth more than 35k gold
+
+ItemDisplay[MAG (ARMOR OR WEAPON) ILVL<59 PRICE>9999]: %YELLOW%$ %BLUE%%NAME%%CONTINUE% // Show $ before all magic items worth more than 10k gold
+ItemDisplay[MAG (ARMOR OR WEAPON) ILVL>58 PRICE<15000 !(ETH AND WEAPON) !GLOVES !DRU !BAR !WP13 !WP12 !(ZON AND (BOW OR THROWING)) !NEC !(SIN AND (ELT OR EXC)) !SOR !CIRC !DIN]:// Hide all magic items with an ilvl higher than 58, worth less than 15k gold, except class + circ + gloves
+ItemDisplay[MAG (ARMOR OR WEAPON) ILVL>58 PRICE>14999]: %YELLOW%$ %BLUE%%NAME%%CONTINUE% // Show $ before all magic items worth more than 10k gold
+ItemDisplay[MAG (ARMOR OR WEAPON) PRICE>19999]: %YELLOW%$%BLUE%%NAME%%CONTINUE% // Show $$ before all magic items worth more than 20k gold
+ItemDisplay[MAG (ARMOR OR WEAPON) PRICE>34999]: %YELLOW%$%BLUE%%NAME%%CONTINUE% // Show $$$ before all magic items worth more than 35k gold
+
+ItemDisplay[RARE ILVL>58 !ETH !ARMOR !SIN !SOR !jew !rin !amu !BOW !t11 !t12 !t13 !t21 !t22 !t23 !t24 !t31 !t32 !t33 !t34 !t35 !t41]:// Hide non-eth rares except armor, maps, jewelry and bows
